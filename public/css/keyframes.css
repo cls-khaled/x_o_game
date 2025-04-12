@@ -1,0 +1,38 @@
+@keyframes slide-in-ltr{
+  0% {
+    left: -100%;
+  }
+  100% {
+    left: 0;
+  }
+    
+}
+
+@keyframes slide-in-rtl{
+  0% {
+    right: -150%;
+  }
+  100% {
+    right: 0;
+    visibility: visible;
+  }
+    
+}
+
+@keyframes winning-animation{
+    0% {
+        border-radius: 50px 10px 10px 10px ;
+    }
+    10%{
+        border-radius: 50px 50px 10px 10px ;
+    }
+    20%{
+        border-radius: 50px 50px 50px 10px ;
+    }
+    30%{
+        border-radius: 50px 50px 50px 50px ;
+    }
+    100%{
+        border-radius: 10px;
+    }
+}
