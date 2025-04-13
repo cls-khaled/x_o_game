@@ -100,6 +100,8 @@ function handleNewGameBtnClick(): void {
     gameMatrixValue = Array.from({ length: 3 }, () => new Array(3).fill(''));
     currentGameSteps = [];
     nextPlayerMarker.innerHTML = playerMarker;
+    nextPlayerMarker.className =''; 
+    nextPlayerMarker.classList.add(playerMarker! == Marker.X ? X_COLOR : O_COLOR );
     gameObserver.innerHTML = "";
     for (let i = 0; i < gameCells.length; i++) {
         gameCells[i].classList.remove(WINNING_STEPS_BACKGROUND);
