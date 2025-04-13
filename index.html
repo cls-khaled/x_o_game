@@ -10,7 +10,7 @@
 
   <body>
     <header>
-      <h1>XO Game</h1>
+      <h1><span>X</span><span>O</span></h1>
     </header>
 
     <main>
@@ -20,7 +20,17 @@
           <div id="new-game-btn">New Game</div>
           <div id="clear-history-btn">Clear History</div>
         </div>
-        <div id="score"> Win X =0 | Win O =0 | Draw =0</div>
+        <div id="score" class="score"> 
+          <span>
+            <span>Win X = </span><span id="win-counter-x">0</span> | 
+          </span>
+          <span>
+            <span>Win O = </span><span id="win-counter-o">0</span> | 
+          </span>
+          <span>
+            <span>Draw = </span><span id="draw-counter">0</span>
+          </span>
+        </div>
 
         <div id="history-list" class="history-list"> </div>
       </div> <!-- / left options -->
@@ -28,8 +38,12 @@
       <!-- game container -->
       <div class="game-container">
         <!-- game observer -->
-        <div class="next-player">Next Player ( <span  id="next-player-marker">X</span> )</div> <!-- / game observer -->
-        <div id="game-observer" class="game-observer"> --- </div>
+        <div class="next-player">
+            <span> Next Player  </span> 
+            <span id="next-player-marker" class="x-color">X</span>
+        </div> <!-- / game observer -->
+
+        <div id="game-observer" class="game-observer"></div>
 
         <!-- game board -->
         <div id="game-board" class="game-board">
@@ -47,25 +61,25 @@
 
     </main>
 
-      <!-- history screen -->
-      <section id="history-screen" class="history-screen hide ">
-        <div class="history-screen__container">
-          <!-- game board -->
-          <div id="history-game-board" class="game-board">
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-          </div> <!-- / game board -->
-          <!-- close btn -->
-          <div id="history-screen-btn">X</div> <!-- / close btn -->
-        </div>
-      </section> <!-- / history screen -->
+    <!-- history screen -->
+    <section id="history-screen" class="history-screen hide ">
+      <div class="history-screen__container">
+        <!-- game board -->
+        <div id="history-game-board" class="game-board">
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+        </div> <!-- / game board -->
+        <!-- close btn -->
+        <div id="history-screen-btn">X</div> <!-- / close btn -->
+      </div>
+    </section> <!-- / history screen -->
 
     <script type="module" src="./src/main.js"></script>
   </body>

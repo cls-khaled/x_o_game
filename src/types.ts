@@ -7,20 +7,20 @@
  * 
  * App types 
 ********************/
-export enum Marker  {
-    X ='X',
+export enum Marker {
+    X = 'X',
     O = 'O',
     DRAW = 'Draw'
 }
 
 export type Winner = {
-    isGameEnd : boolean;
+    isGameEnd: boolean;
     playerMarker?: Marker;
     WinnerlinePositions?: Array<number>;
 }
 
-export type RoundRecord= {
-    winner:Winner; 
-    startMarker:Marker;
-    stepsPosition:Array<number>; 
+export type RoundRecord = {
+    winner: Winner;
+    startMarker: Marker;
+    stepsPosition: Array<number>;
 }

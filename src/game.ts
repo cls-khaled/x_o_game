@@ -8,7 +8,7 @@
  * logic for calculation the winner for X_O Game 
 ********************/
 
-import { Marker, Winner} from "./types";
+import { Marker, Winner } from "./types";
 
 export function checkWinner(
     gameMatrixValue: Array<Array<string>>,
