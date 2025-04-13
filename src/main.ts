@@ -102,11 +102,10 @@ function handleNewGameBtnClick(): void {
     nextPlayerMarker.innerHTML = playerMarker;
     nextPlayerMarker.className =''; 
     nextPlayerMarker.classList.add(playerMarker! == Marker.X ? X_COLOR : O_COLOR );
+    gameObserver.classList.remove(X_COLOR , O_COLOR);
     gameObserver.innerHTML = "";
     for (let i = 0; i < gameCells.length; i++) {
-        gameCells[i].classList.remove(WINNING_STEPS_BACKGROUND);
-        gameCells[i].classList.remove(X_COLOR);
-        gameCells[i].classList.remove(O_COLOR);
+        gameCells[i].classList.remove(X_COLOR , O_COLOR , WINNING_STEPS_BACKGROUND);
         gameCells[i].innerHTML = '';
 
     }
@@ -119,9 +118,7 @@ function handleScreenCloseBtnClick(): void {
     // clear data and style for history display board
     for (let i = 0; i < historyGameBoardCells.length; i++) {
         historyGameBoardCells[i].innerHTML = "";
-        historyGameBoardCells[i].classList.remove(X_COLOR);
-        historyGameBoardCells[i].classList.remove(O_COLOR);
-        historyGameBoardCells[i].classList.remove(WINNING_STEPS_BACKGROUND);
+        historyGameBoardCells[i].classList.remove(X_COLOR , O_COLOR , WINNING_STEPS_BACKGROUND);
     }
     timeouts.forEach((timeout) => clearTimeout(timeout));
     timeouts = [];
